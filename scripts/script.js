@@ -1,6 +1,6 @@
 
 // Display current time at top of page
-let currentDay = $("#currentDay").html(dayjs().format("dddd, MMMM M"));
+let headerTimeDisplay = $("#currentDay").html(dayjs().format("dddd, MMMM M"));
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
@@ -12,7 +12,17 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  
+  $("#allTimeBlocks").on("click", ".saveBtn", function() {
+    let element = $(this);
+    // console.log($(this).attr("id"));
+    // console.log($(".description").val())
+
+    // Get the closest id and save its value as a key to localStorage
+    console.log(element.find("id"));
+    localStorage.setItem(element.find("id"), $(".description").val());
+    let userText = $(".description").val()
+
+  });
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -20,6 +30,14 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   
+  // console.log(dayjs().format('k'))
+  // if (dayjs().format("k") > dayjs().format("k")) {
+
+  // }
+  let timeBlockContainer = $(".container-fluid px-5")
+  for (let i=0; i < timeBlockContainer.length; i++) {
+    console.log("hello")
+  }
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
