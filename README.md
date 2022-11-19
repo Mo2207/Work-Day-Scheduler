@@ -10,11 +10,11 @@ This application is a work-day scheduler that is color-coded based on the curren
 ## Installation:
 This project can be viewed using the live server or view in default browser extensions in VScode.
 
-Or it can be viewed on github pages here: 
+Or it can be viewed on github pages here: https://mo2207.github.io/Work-Day-Scheduler/
 
 ## Usage:
-!["picture of work-day-scheduler code"]()
-!["picture of work-day-scheduler page"]()
+!["picture of work-day-scheduler code"](./assets/images/work-day-scheduler-code.png)
+!["picture of work-day-scheduler page"](./assets/images/work-day-scheduler-page.png)
 
 ## Credits:
 I built this myself, with so much google and trial and error.
